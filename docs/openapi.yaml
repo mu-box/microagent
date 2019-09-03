@@ -111,6 +111,37 @@ paths:
         '200':
           description: _
   /pulse:
+    get:
+      summary: Get current Pulse stats
+      responses:
+        '200':
+          description: _
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                _connected:                                      1
+                containerlogger.data.logvac.2.1-cpu_percent:     0.0077541711229946525
+                containerlogger.data.logvac.2.1-ram_percent:     16.0021484375
+                containerlogger.data.logvac.2.1-ram_used:        3.35589376e+08
+                containermesh.data.portal.2.1-cpu_percent:       1.1787363636363635
+                containermesh.data.portal.2.1-ram_percent:       4.6041015625
+                containermesh.data.portal.2.1-ram_used:          9.6555008e+07
+                containermonitor.data.pulse.2.1-cpu_percent:     0.35860294117647057
+                containermonitor.data.pulse.2.1-ram_percent:     3.5439453125
+                containermonitor.data.pulse.2.1-ram_used:        7.432192e+07
+                containerpusher.data.mist.2.1-cpu_percent:       0.010028944444444444
+                containerpusher.data.mist.2.1-ram_percent:       0.26679687500000004
+                containerpusher.data.mist.2.1-ram_used:          5.595136e+06
+                containerwarehouse.data.hoarder.2.1-cpu_percent: 0.013430652173913043
+                containerwarehouse.data.hoarder.2.1-ram_percent: 3.0568359375
+                containerwarehouse.data.hoarder.2.1-ram_used:    6.4106496e+07
+                cpu-cpu_percent:                                 8.108836206669642
+                diskdevvda1-disk_percent:                        39.4254610674276
+                diskdevvda15-disk_percent:                       3.449437571356379
+                ram-ram_percent:                                 29.7111328125
+                swap-swap_percent:                               0
     post:
       summary: Register a Pulse stats reporting endpoint
       requestBody:
